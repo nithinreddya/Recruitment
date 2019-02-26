@@ -52,7 +52,8 @@ else if($user=="4")
         		</div>
           </div>
           <div class="modal-footer">
-            <button type="submit"  name = "close" class="btn btn-default" ><a href ="<?php echo $user;?>"> Update</a></button>
+		  <button type="submit"  name = "close" class="btn btn-default" ><a href ="<?php echo $user;?>"> Update</a></button>
+            <button type="submit"  name = "close" class="btn btn-default" ><a href ="<?php echo $user;?>"> Cancel</a></button>
           </div>
           </form>
         </div>
