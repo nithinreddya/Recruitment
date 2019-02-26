@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>AGI Portal</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <meta name="google-signin-client_id" content="553318146041-ued5ri30sc8rqj1uspklbsrb7c7500ol.apps.googleusercontent.com">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+	  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+	  <style>
+			@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+			.navbar-custom {
+					border-style: none;
+    			background-color:white;
+
+			}
+			.nav.navbar-nav li a {
+			    color: black;
+			}
+			ul.nav a:hover { color: rgb(14, 125, 215) !important; background-color: black;}
+			.bg {
+			    /* The image used */
+			    background-image: url("8.jpg");
+
+			    /* Full height */
+			    height: 100%;
+
+			    /* Center and scale the image nicely */
+			    background-position: center;
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			}
+			body, html {
+					background-color:black;
+			    height: 100%;
+					color:#3e8e41;
+					font-family: "SF Mono","Monaco","Andale Mono","Lucida Console","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+			}
+			.detailBox {
+			    width: 60%;
+					position:relative;
+					left:125px;
+			    margin:100px;
+			}
+			.titleBox {
+			    background-color:black;
+			    padding:10px;
+			}
+			.titleBox label{
+			  color:white;
+			  margin:0;
+			  display:inline-block;
+			}
+
+			.commentBox {
+			    padding:10px;
+			    border-top:1px dotted #bbb;
+			}
+			.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+			    width:80%;
+			}
+			.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+			    width:18%;
+			}
+			.actionBox .form-group * {
+			    width:100%;
+			}
+			.taskDescription {
+			    margin-top:10px 0;
+			}
+			.commentList {
+			    padding:0;
+			    list-style:none;
+			    max-height:200px;
+			    overflow:auto;
+			}
+			.commentList li {
+			    margin:0;
+			    margin-top:10px;
+			}
+			.commentList li > div {
+			    display:table-cell;
+			}
+			.commenterImage {
+			    width:30px;
+			    margin-right:5px;
+			    height:100%;
+			    float:left;
+			}
+			.commenterImage img {
+			    width:100%;
+			    border-radius:50%;
+			}
+			.commentText p {
+			    margin:0;
+			}
+			.sub-text {
+			    color:#aaa;
+			    font-family:verdana;
+			    font-size:11px;
+			}
+			.actionBox {
+			    border-top:1px dotted #bbb;
+			    padding:10px;
+			}
+		</style>
+		<script>
+			function f1(str){
+
+			var xhttp;
+		  if (str == "") {
+		    document.getElementById("txt").innerHTML = "";
+		    return;
+		  }
+		  xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		      document.getElementById("txt").innerHTML = this.responseText;
+		    }
+		  };
+		  xhttp.open("GET", "comment.php?category="+str, true);
+		  xhttp.send();
+		}
+	</script>
+	</head>
