@@ -12,7 +12,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
 
 <body id = "body" class ="bg">
-<img src = "images/icons/logo1.png" style="position:relative;top:200px;">
 	<div class="dropdown" id = "btn">
 		<button onclick="myFunction()" class="dropbtn">Login as</button>
 		  <div id="myDropdown" class="dropdown-content">
