@@ -21,6 +21,7 @@ include 'header.php';
 						if(isset($_POST['mobile'])&&isset($_POST['password'])){
 							$email = $_POST['mobile'];
 							$password = $_POST['password'];
+							$des = $_POST['sd'];
 							$_SESSION['user_id'] = $email;
 							if($email=="1")
 							{
