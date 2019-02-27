@@ -17,7 +17,7 @@ include 'header.php';
 
 						<?php
 						// require 'connect.php';
-						//
+						require 'session.php';
 						if(isset($_POST['mobile'])&&isset($_POST['password'])){
 							$email = $_POST['mobile'];
 							$password = $_POST['password'];
